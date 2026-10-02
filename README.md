@@ -12,10 +12,12 @@ Rebuilt from scratch with an emphasis on authentic craftsmanship, verified busin
 | :--- | :--- |
 | **Business Name** | BST AUTO SHIELD |
 | **Address** | 1 Henson Way, Kettering, NN16 8PX, United Kingdom |
+| **Plus Code** | `C754+HM Kettering, United Kingdom` |
 | **Phone** | `+44 7414 768308` (Tel: [`tel:+447414768308`](tel:+447414768308)) |
+| **WhatsApp** | `+44 7414 768308` ([Chat on WhatsApp](https://wa.me/447414768308)) |
 | **Location** | Kettering, Northamptonshire, UK |
 | **Coordinates** | `52.4089767, -0.7433669` |
-| **Opening Hours** | **Monday – Saturday:** 9:00 AM – 9:00 PM<br>**Sunday:** Closed *(Fully editable)* |
+| **Opening Hours** | **Mon – Sat:** 9:00 AM – 9:00 PM<br>**Sunday:** Closed *(Fully editable)* |
 | **Google Maps Directions** | [Get Directions](https://maps.google.com/?q=1+Henson+Way,+Kettering,+NN16+8PX) |
 
 ---
@@ -28,9 +30,10 @@ Rebuilt from scratch with an emphasis on authentic craftsmanship, verified busin
   - **Canvas Background:** Obsidian Near-Black (`#090b0e`)
   - **Panel Surfaces:** Deep Matte Carbon & Chamfered Glass (`#14171e`, `#1b2029`)
   - **Precision Accent:** Electric Cyan (`#00e5ff`) applied selectively to CTAs, badges, active states, and focal highlights
+  - **WhatsApp Accent:** Official WhatsApp Green (`#25D366`) for direct customer communication
   - **Text:** Crisp Off-White (`#f8fafc`) and Muted Titanium (`#94a3b8`)
 - **Typography:**
-  - **Headlines / Display:** `Space Grotesk` (bold, cinematic, engineered)
+  - **Headlines & Display:** `Outfit` (modern, geometric, engineered luxury, zero folding)
   - **Body / Editorial:** `Plus Jakarta Sans` (clean, highly legible)
   - **Technical Labels & Chips:** `JetBrains Mono`
 

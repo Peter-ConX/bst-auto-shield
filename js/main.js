@@ -14,7 +14,10 @@
     name: "BST AUTO SHIELD",
     phone: "+44 7414 768308",
     phoneClean: "+447414768308",
+    whatsapp: "+447414768308",
+    whatsappUrl: "https://wa.me/447414768308",
     address: "1 Henson Way, Kettering, NN16 8PX, United Kingdom",
+    plusCode: "C754+HM Kettering, United Kingdom",
     directionsUrl: "https://maps.google.com/?q=1+Henson+Way,+Kettering,+NN16+8PX",
     hours: [
       { day: "Monday", open: "09:00", close: "21:00", isOpen: true },
@@ -389,7 +392,7 @@
       const vehicleModel = document.getElementById('vehicle-model')?.value.trim();
       const vehicleYear = document.getElementById('vehicle-year')?.value.trim();
       const service = document.getElementById('quote-service')?.value;
-      const contactMethod = document.querySelector('input[name="contact_method"]:checked')?.value || 'Phone call';
+      const contactMethod = document.querySelector('input[name="contact_method"]:checked')?.value || 'WhatsApp';
       const notes = document.getElementById('quote-notes')?.value.trim() || 'No additional notes specified';
 
       if (!name || !phone || !vehicleMake || !vehicleModel || !vehicleYear || !service) {

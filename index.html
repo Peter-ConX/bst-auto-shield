@@ -26,7 +26,7 @@
   <!-- Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -46,10 +46,14 @@
               DEFAULT: '#00e5ff',
               bright: '#3bf1ff',
               glow: 'rgba(0, 229, 255, 0.28)'
+            },
+            whatsapp: {
+              DEFAULT: '#25D366',
+              bright: '#2eef75'
             }
           },
           fontFamily: {
-            display: ['Space Grotesk', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
             body: ['Plus Jakarta Sans', 'sans-serif'],
             mono: ['JetBrains Mono', 'monospace']
           }
@@ -118,37 +122,45 @@
         </div>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden lg:flex items-center gap-8">
-        <a href="#services" class="font-mono text-xs uppercase tracking-wider text-slate-300 hover:text-cyan transition-colors">Services</a>
-        <a href="#why-bst" class="font-mono text-xs uppercase tracking-wider text-slate-300 hover:text-cyan transition-colors">Why BST</a>
-        <a href="#precision-craft" class="font-mono text-xs uppercase tracking-wider text-slate-300 hover:text-cyan transition-colors">Precision Craft</a>
-        <a href="#comparison" class="font-mono text-xs uppercase tracking-wider text-slate-300 hover:text-cyan transition-colors">Before &amp; After</a>
-        <a href="#gallery" class="font-mono text-xs uppercase tracking-wider text-slate-300 hover:text-cyan transition-colors">Gallery</a>
-        <a href="#process" class="font-mono text-xs uppercase tracking-wider text-slate-300 hover:text-cyan transition-colors">Process</a>
-        <a href="#contact" class="font-mono text-xs uppercase tracking-wider text-slate-300 hover:text-cyan transition-colors">Contact</a>
+      <!-- Desktop Nav Links (Clean, unfolded, single line) -->
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-7 shrink-0">
+        <a href="#services" class="font-display font-medium text-[13px] tracking-wide text-slate-300 hover:text-cyan transition-colors whitespace-nowrap">Services</a>
+        <a href="#why-bst" class="font-display font-medium text-[13px] tracking-wide text-slate-300 hover:text-cyan transition-colors whitespace-nowrap">Why BST</a>
+        <a href="#precision-craft" class="font-display font-medium text-[13px] tracking-wide text-slate-300 hover:text-cyan transition-colors whitespace-nowrap">Craft</a>
+        <a href="#comparison" class="font-display font-medium text-[13px] tracking-wide text-slate-300 hover:text-cyan transition-colors whitespace-nowrap">Comparison</a>
+        <a href="#gallery" class="font-display font-medium text-[13px] tracking-wide text-slate-300 hover:text-cyan transition-colors whitespace-nowrap">Gallery</a>
+        <a href="#process" class="font-display font-medium text-[13px] tracking-wide text-slate-300 hover:text-cyan transition-colors whitespace-nowrap">Process</a>
+        <a href="#contact" class="font-display font-medium text-[13px] tracking-wide text-slate-300 hover:text-cyan transition-colors whitespace-nowrap">Contact</a>
       </nav>
 
       <!-- Trailing CTAs -->
-      <div class="flex items-center gap-3">
-        <!-- Call Button -->
-        <a href="tel:+447414768308" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-md bg-surface-raised border border-white/10 text-slate-200 hover:border-cyan/50 hover:text-white text-xs font-mono transition-all">
+      <div class="flex items-center gap-2.5 shrink-0">
+        <!-- WhatsApp Direct CTA -->
+        <a href="https://wa.me/447414768308?text=Hello%20BST%20Auto%20Shield,%20I'd%20like%20to%20enquire%20about%20window%20tinting%20for%20my%20vehicle." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-md bg-[#25D366]/15 border border-[#25D366]/50 text-[#25D366] hover:bg-[#25D366]/25 font-mono text-xs whitespace-nowrap transition-all shadow-[0_0_12px_rgba(37,211,102,0.15)]" title="Chat on WhatsApp">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+          <span>WhatsApp</span>
+        </a>
+
+        <!-- Phone Call Button -->
+        <a href="tel:+447414768308" class="hidden md:inline-flex items-center gap-1.5 px-3 py-2 rounded-md bg-surface-raised border border-white/10 text-slate-200 hover:border-cyan/50 hover:text-white text-xs font-mono whitespace-nowrap transition-all">
           <svg class="w-3.5 h-3.5 text-cyan" fill="currentColor" viewBox="0 0 20 20">
             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
           </svg>
-          <span>+44 7414 768308</span>
+          <span>07414 768308</span>
         </a>
 
         <!-- Quote CTA -->
-        <a href="#quote" class="btn-primary-cyan text-xs !py-2.5 !px-4">
-          <span>Get a Quote</span>
+        <a href="#quote" class="btn-primary-cyan text-xs !py-2.5 !px-3.5 whitespace-nowrap shrink-0">
+          <span>Get Quote</span>
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
           </svg>
         </a>
 
         <!-- Mobile Menu Toggle Button -->
-        <button id="mobile-menu-open" type="button" class="lg:hidden p-2 rounded-md bg-surface-raised border border-white/10 text-slate-300 hover:text-white" aria-label="Open Navigation Menu" aria-expanded="false">
+        <button id="mobile-menu-open" type="button" class="lg:hidden p-2 rounded-md bg-surface-raised border border-white/10 text-slate-300 hover:text-white shrink-0" aria-label="Open Navigation Menu" aria-expanded="false">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
           </svg>
@@ -182,6 +194,12 @@
     </div>
 
     <div class="mt-auto pt-6 border-t border-white/10 flex flex-col gap-3">
+      <a href="https://wa.me/447414768308?text=Hello%20BST%20Auto%20Shield,%20I'd%20like%20to%20enquire%20about%20window%20tinting%20for%20my%20vehicle." target="_blank" rel="noopener noreferrer" class="btn-whatsapp w-full justify-center">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span>CHAT ON WHATSAPP</span>
+      </a>
       <a href="tel:+447414768308" class="btn-secondary-dark w-full justify-center">
         <svg class="w-4 h-4 text-cyan" fill="currentColor" viewBox="0 0 20 20">
           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
@@ -235,14 +253,20 @@
         </div>
 
         <!-- Hero CTAs -->
-        <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
-          <a href="#quote" class="btn-primary-cyan w-full text-sm !py-4 shadow-lg shadow-cyan/20">
+        <div class="lg:col-span-4 flex flex-col gap-3 justify-end">
+          <a href="#quote" class="btn-primary-cyan w-full text-sm !py-3.5 shadow-lg shadow-cyan/20">
             <span>GET A QUOTE</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
             </svg>
           </a>
-          <a href="tel:+447414768308" class="btn-secondary-dark w-full text-sm !py-4">
+          <a href="https://wa.me/447414768308?text=Hello%20BST%20Auto%20Shield,%20I'd%20like%20to%20enquire%20about%20window%20tinting%20for%20my%20vehicle." target="_blank" rel="noopener noreferrer" class="btn-whatsapp w-full text-sm !py-3.5">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            <span>WHATSAPP BST AUTO SHIELD</span>
+          </a>
+          <a href="tel:+447414768308" class="btn-secondary-dark w-full text-sm !py-3.5">
             <svg class="w-4 h-4 text-cyan" fill="currentColor" viewBox="0 0 20 20">
               <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
             </svg>
@@ -832,8 +856,41 @@
       <!-- Gallery Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- Gallery Item 1: Real Customer Car in Studio Bay -->
-        <div data-gallery-category="studio vehicles" data-title="BST Auto Shield Studio Vehicle" data-desc="Kettering Studio Installation Bay, 1 Henson Way" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
+        <!-- Gallery Item 1: Real Customer Mercedes -->
+        <div data-gallery-category="vehicles tint" data-title="Mercedes Executive Tint" data-desc="Complete privacy window tint application" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
+          <img src="assets/real/mercedes.jpg" alt="Mercedes with finished window tint at BST Auto Shield" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">CLIENT VEHICLE</span>
+            <h4 class="font-display font-semibold text-white text-base">Mercedes Saloon Privacy Tint</h4>
+            <p class="text-xs text-slate-300">1 Henson Way Studio</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2: Real Customer Car 1 -->
+        <div data-gallery-category="vehicles tint" data-title="Performance Vehicle Tint" data-desc="Precision automotive window film application" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
+          <img src="assets/real/car-1.jpg" alt="Finished customer vehicle at BST Auto Shield" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">CLIENT VEHICLE</span>
+            <h4 class="font-display font-semibold text-white text-base">Performance Vehicle Shading</h4>
+            <p class="text-xs text-slate-300">Clean edge alignment</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3: Real Customer Car 2 -->
+        <div data-gallery-category="vehicles tint" data-title="Estate Privacy Glass" data-desc="Rear privacy glass package" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
+          <img src="assets/real/car-2.jpg" alt="Customer vehicle with rear privacy tint at BST Auto Shield" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">CLIENT VEHICLE</span>
+            <h4 class="font-display font-semibold text-white text-base">Estate Privacy Glass Package</h4>
+            <p class="text-xs text-slate-300">Kettering Studio</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 4: Customer Car in Studio Bay -->
+        <div data-gallery-category="studio vehicles" data-title="BST Auto Shield Studio Bay" data-desc="Kettering Studio Installation Bay, 1 Henson Way" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
           <img src="assets/real/real-1-studio-car.jpg" alt="BST Auto Shield Studio customer vehicle in workshop bay" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
           <div class="absolute bottom-4 left-4 right-4">
@@ -843,7 +900,7 @@
           </div>
         </div>
 
-        <!-- Gallery Item 2: Real Workshop Front -->
+        <!-- Gallery Item 5: Real Workshop Front -->
         <div data-gallery-category="studio" data-title="BST Auto Shield Workshop" data-desc="1 Henson Way, Kettering NN16 8PX" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
           <img src="assets/real/real-2-workshop-front.jpg" alt="BST Auto Shield Workshop front, 1 Henson Way, Kettering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
@@ -854,7 +911,7 @@
           </div>
         </div>
 
-        <!-- Gallery Item 3: Window Tint Detail Application (Real Asset) -->
+        <!-- Gallery Item 6: Window Tint Detail Application -->
         <div data-gallery-category="tint" data-title="Window Tint Application" data-desc="Careful edge alignment and film smoothing" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
           <img src="assets/real/real-4-tint-window.jpg" alt="Window tint film detail application on car glass" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
@@ -862,39 +919,6 @@
             <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">HAND-CRAFTED DETAIL</span>
             <h4 class="font-display font-semibold text-white text-base">Precision Window Film Prep</h4>
             <p class="text-xs text-slate-300">Edge finish and moisture extraction</p>
-          </div>
-        </div>
-
-        <!-- Gallery Item 4: Real Studio Exterior / Finished Profile -->
-        <div data-gallery-category="vehicles studio" data-title="Finished Vehicle Profile" data-desc="Vehicle ready for final inspection and collection" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
-          <img src="assets/real/real-3-exterior-detail.jpg" alt="Finished customer vehicle exterior at BST Auto Shield" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
-          <div class="absolute bottom-4 left-4 right-4">
-            <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">STUDIO FINISH</span>
-            <h4 class="font-display font-semibold text-white text-base">Vehicle Glass Inspection</h4>
-            <p class="text-xs text-slate-300">Clean surface handover</p>
-          </div>
-        </div>
-
-        <!-- Gallery Item 5: Executive Saloon Privacy Package -->
-        <div data-gallery-category="vehicles tint" data-title="Executive Saloon Privacy Film" data-desc="Rear privacy tint configuration" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
-          <img src="assets/saloon-limo-1920.jpg" alt="Executive saloon with dark rear window tint" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
-          <div class="absolute bottom-4 left-4 right-4">
-            <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">PRIVACY CONFIGURATION</span>
-            <h4 class="font-display font-semibold text-white text-base">Executive Performance Saloon</h4>
-            <p class="text-xs text-slate-300">B-Pillar back privacy glass</p>
-          </div>
-        </div>
-
-        <!-- Gallery Item 6: Coupe Side Glass Tint -->
-        <div data-gallery-category="vehicles tint" data-title="Sports Coupe Window Tint" data-desc="Uniform smoked tint application" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
-          <img src="assets/hero-porsche-1920.jpg" alt="Sports coupe side profile with automotive window tint" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
-          <div class="absolute bottom-4 left-4 right-4">
-            <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">COPE STYLING</span>
-            <h4 class="font-display font-semibold text-white text-base">Sports Coupe Profile</h4>
-            <p class="text-xs text-slate-300">Smoked tint application</p>
           </div>
         </div>
 
@@ -1037,7 +1061,7 @@
           <!-- Studio Details Cards -->
           <div class="space-y-4">
             
-            <!-- Address Card -->
+            <!-- Address Card with Plus Code -->
             <div class="p-5 rounded-xl bg-surface border border-white/10 flex items-start gap-4">
               <div class="w-10 h-10 rounded-lg bg-surface-lowest flex items-center justify-center text-cyan shrink-0 border border-white/10">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -1047,6 +1071,7 @@
               <div class="flex-1">
                 <h4 class="font-display text-sm font-semibold text-white">Studio Address</h4>
                 <p class="text-sm text-slate-300 mt-0.5">1 Henson Way, Kettering, NN16 8PX, United Kingdom</p>
+                <p class="font-mono text-xs text-cyan mt-1">Plus Code: C754+HM Kettering, United Kingdom</p>
                 <div class="mt-2 flex items-center gap-3">
                   <a href="https://maps.google.com/?q=1+Henson+Way,+Kettering,+NN16+8PX" target="_blank" rel="noopener noreferrer" class="link-ghost-cyan text-xs">
                     <span>Get Directions</span>
@@ -1055,6 +1080,25 @@
                     </svg>
                   </a>
                 </div>
+              </div>
+            </div>
+
+            <!-- WhatsApp Card -->
+            <div class="p-5 rounded-xl bg-surface border border-[#25D366]/30 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-[#25D366]/15 flex items-center justify-center text-[#25D366] shrink-0 border border-[#25D366]/30">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-display text-sm font-semibold text-white">Direct WhatsApp</h4>
+                <a href="https://wa.me/447414768308?text=Hello%20BST%20Auto%20Shield,%20I'd%20like%20to%20enquire%20about%20window%20tinting%20for%20my%20vehicle." target="_blank" rel="noopener noreferrer" class="text-[#25D366] font-mono text-base font-bold hover:underline block mt-0.5">
+                  +44 7414 768308
+                </a>
+                <p class="text-xs text-slate-400 mt-1">Instant messaging &amp; vehicle photo quotes</p>
+                <a href="https://wa.me/447414768308?text=Hello%20BST%20Auto%20Shield,%20I'd%20like%20to%20enquire%20about%20window%20tinting%20for%20my%20vehicle." target="_blank" rel="noopener noreferrer" class="btn-whatsapp text-xs !py-1.5 !px-3 mt-2 inline-flex">
+                  <span>Chat on WhatsApp</span>
+                </a>
               </div>
             </div>
 
@@ -1084,7 +1128,12 @@
               <div class="flex-1">
                 <h4 class="font-display text-sm font-semibold text-white">Opening Hours</h4>
                 <div class="text-xs font-mono text-slate-300 space-y-1 mt-1">
-                  <p><span class="text-white font-medium">Monday – Saturday:</span> 9:00 AM – 9:00 PM</p>
+                  <p><span class="text-white font-medium">Monday:</span> 9:00 AM – 9:00 PM</p>
+                  <p><span class="text-white font-medium">Tuesday:</span> 9:00 AM – 9:00 PM</p>
+                  <p><span class="text-white font-medium">Wednesday:</span> 9:00 AM – 9:00 PM</p>
+                  <p><span class="text-white font-medium">Thursday:</span> 9:00 AM – 9:00 PM</p>
+                  <p><span class="text-white font-medium">Friday:</span> 9:00 AM – 9:00 PM</p>
+                  <p><span class="text-white font-medium">Saturday:</span> 9:00 AM – 9:00 PM</p>
                   <p><span class="text-white font-medium">Sunday:</span> Closed</p>
                 </div>
                 <div data-business-status class="mt-2 text-xs font-mono text-cyan">
@@ -1213,24 +1262,34 @@
                   </select>
                 </div>
 
-                <!-- Preferred Contact Method -->
+                <!-- Preferred Contact Method (WhatsApp & Phone Call - No text messages) -->
                 <div>
                   <label class="block font-mono text-xs uppercase text-slate-400 mb-2">
                     Preferred Contact Method
                   </label>
                   <div class="grid grid-cols-2 gap-3">
                     <label class="package-radio-tile">
-                      <input type="radio" name="contact_method" value="Phone call" checked>
+                      <input type="radio" name="contact_method" value="WhatsApp" checked>
                       <div class="tile-box">
-                        <span class="tile-title font-mono text-xs uppercase text-white font-semibold block">Phone Call</span>
-                        <span class="text-[10px] text-slate-400 block mt-0.5">Direct phone discussion</span>
+                        <span class="tile-title font-mono text-xs uppercase text-white font-semibold flex items-center justify-center gap-1.5">
+                          <svg class="w-3.5 h-3.5 text-[#25D366] fill-current" viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                          </svg>
+                          <span>WhatsApp</span>
+                        </span>
+                        <span class="text-[10px] text-slate-400 block mt-0.5 text-center">Fast chat on +44 7414 768308</span>
                       </div>
                     </label>
                     <label class="package-radio-tile">
-                      <input type="radio" name="contact_method" value="Text / SMS">
+                      <input type="radio" name="contact_method" value="Phone call">
                       <div class="tile-box">
-                        <span class="tile-title font-mono text-xs uppercase text-white font-semibold block">Text Message</span>
-                        <span class="text-[10px] text-slate-400 block mt-0.5">Quick SMS response</span>
+                        <span class="tile-title font-mono text-xs uppercase text-white font-semibold flex items-center justify-center gap-1.5">
+                          <svg class="w-3.5 h-3.5 text-cyan" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
+                          </svg>
+                          <span>Phone Call</span>
+                        </span>
+                        <span class="text-[10px] text-slate-400 block mt-0.5 text-center">Direct phone discussion</span>
                       </div>
                     </label>
                   </div>
@@ -1253,7 +1312,7 @@
                 </button>
 
                 <p class="font-mono text-[11px] text-slate-400 text-center">
-                  Your vehicle specifications are reviewed by BST Auto Shield in Kettering. No spam, ever.
+                  Your vehicle specifications are reviewed by BST Auto Shield in Kettering.
                 </p>
 
               </form>
@@ -1271,7 +1330,7 @@
                 <span class="font-mono text-xs text-cyan uppercase tracking-widest block mb-2">ENQUIRY RECORDED</span>
                 <h3 class="font-display font-bold text-2xl text-white uppercase">Thank You For Your Enquiry</h3>
                 <p class="text-slate-300 text-sm mt-2 max-w-md mx-auto">
-                  Your vehicle specifications have been prepared. You can call BST Auto Shield directly now to confirm scheduling immediately, or we will reach out via your preferred method.
+                  Your vehicle specifications have been prepared. You can chat on WhatsApp or call BST Auto Shield directly now to confirm scheduling immediately.
                 </p>
               </div>
 
@@ -1279,14 +1338,20 @@
               <div id="confirmation-details" class="p-6 rounded-xl bg-surface-lowest border border-white/10 text-left max-w-md mx-auto"></div>
 
               <div class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto pt-2">
-                <a href="tel:+447414768308" class="btn-primary-cyan flex-1 text-xs !py-3">
+                <a href="https://wa.me/447414768308?text=Hello%20BST%20Auto%20Shield,%20I%20have%20just%20submitted%20my%20vehicle%20enquiry%20online." target="_blank" rel="noopener noreferrer" class="btn-whatsapp flex-1 text-xs !py-3 whitespace-nowrap">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                  </svg>
+                  <span>CHAT ON WHATSAPP</span>
+                </a>
+                <a href="tel:+447414768308" class="btn-primary-cyan flex-1 text-xs !py-3 whitespace-nowrap">
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
                   </svg>
-                  <span>CALL BST AUTO SHIELD NOW</span>
+                  <span>CALL BST AUTO SHIELD</span>
                 </a>
-                <button type="button" id="reset-quote-form" class="btn-secondary-dark flex-1 text-xs !py-3">
-                  <span>Edit Enquiry</span>
+                <button type="button" id="reset-quote-form" class="btn-secondary-dark text-xs !py-3 whitespace-nowrap">
+                  <span>Edit</span>
                 </button>
               </div>
             </div>
@@ -1300,30 +1365,48 @@
   </section>
 
   <!-- ==========================================================================
-       STICKY FLOATING QUICK ACTION BAR
+       STICKY FLOATING QUICK ACTION BAR (WITH WHATSAPP & NO WRAPPING)
        ========================================================================== -->
-  <aside aria-label="Quick Actions" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 max-w-fit px-3 py-2 rounded-full glass-panel border border-white/15 shadow-2xl glow-cyan-sm flex items-center gap-2">
-    <a href="tel:+447414768308" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface hover:bg-surface-raised text-slate-200 hover:text-white text-xs font-mono transition-colors">
-      <svg class="w-3.5 h-3.5 text-cyan" fill="currentColor" viewBox="0 0 20 20">
+  <aside aria-label="Quick Actions" class="fixed bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 z-40 w-auto max-w-[96vw] px-2 sm:px-3 py-1.5 sm:py-2 rounded-full glass-panel border border-white/15 shadow-2xl glow-cyan-sm flex items-center gap-1 sm:gap-2 whitespace-nowrap">
+    
+    <!-- WhatsApp Button (Prominent) -->
+    <a href="https://wa.me/447414768308?text=Hello%20BST%20Auto%20Shield,%20I'd%20like%20to%20enquire%20about%20window%20tinting%20for%20my%20vehicle." target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#25D366] text-[#061c0e] font-display text-xs font-bold uppercase hover:bg-[#2eef75] transition-all whitespace-nowrap shadow-[0_0_15px_rgba(37,211,102,0.4)] shrink-0">
+      <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+
+    <div class="h-4 w-px bg-white/15 shrink-0"></div>
+
+    <!-- Call Button -->
+    <a href="tel:+447414768308" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-surface hover:bg-surface-raised text-slate-200 hover:text-white text-xs font-mono whitespace-nowrap transition-colors shrink-0">
+      <svg class="w-3.5 h-3.5 text-cyan shrink-0" fill="currentColor" viewBox="0 0 20 20">
         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
       </svg>
-      <span class="hidden sm:inline">CALL:</span>
-      <span class="font-bold">+44 7414 768308</span>
+      <span class="hidden md:inline">Call:</span>
+      <span class="font-bold">07414 768308</span>
     </a>
-    <div class="h-4 w-px bg-white/15"></div>
-    <a href="#quote" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-cyan text-slate-950 font-display text-xs font-bold uppercase hover:bg-cyan-bright transition-colors shadow-[0_0_15px_rgba(0,229,255,0.4)]">
+
+    <div class="h-4 w-px bg-white/15 shrink-0"></div>
+
+    <!-- Get Quote Button -->
+    <a href="#quote" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan text-slate-950 font-display text-xs font-bold uppercase hover:bg-cyan-bright transition-colors shadow-[0_0_15px_rgba(0,229,255,0.4)] whitespace-nowrap shrink-0">
       <span>Get Quote</span>
-      <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
       </svg>
     </a>
-    <div class="h-4 w-px bg-white/15"></div>
-    <a href="https://maps.google.com/?q=1+Henson+Way,+Kettering,+NN16+8PX" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface hover:bg-surface-raised text-slate-300 hover:text-white font-mono text-xs transition-colors">
-      <svg class="w-3.5 h-3.5 text-cyan" fill="currentColor" viewBox="0 0 20 20">
+
+    <div class="h-4 w-px bg-white/15 shrink-0 hidden sm:block"></div>
+
+    <!-- Map Directions -->
+    <a href="https://maps.google.com/?q=1+Henson+Way,+Kettering,+NN16+8PX" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-surface hover:bg-surface-raised text-slate-300 hover:text-white font-mono text-xs whitespace-nowrap transition-colors shrink-0">
+      <svg class="w-3.5 h-3.5 text-cyan shrink-0" fill="currentColor" viewBox="0 0 20 20">
         <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
       </svg>
-      <span class="hidden md:inline">1 Henson Way, Kettering</span>
-      <span class="md:hidden">Map</span>
+      <span class="hidden lg:inline">1 Henson Way, Kettering</span>
+      <span class="lg:hidden">Map</span>
     </a>
   </aside>
 
@@ -1373,10 +1456,18 @@
           <div class="text-xs font-mono text-slate-300 space-y-1.5">
             <p><span class="text-slate-400">Monday – Saturday:</span> 9:00 AM – 9:00 PM</p>
             <p><span class="text-slate-400">Sunday:</span> Closed</p>
-            <p class="pt-2"><span class="text-slate-400">Address:</span> 1 Henson Way, Kettering NN16 8PX</p>
+            <p class="pt-2"><span class="text-slate-400">Address:</span> 1 Henson Way, Kettering NN16 8PX, UK</p>
+            <p><span class="text-slate-400">Plus Code:</span> C754+HM Kettering, United Kingdom</p>
+            <p><span class="text-slate-400">WhatsApp:</span> <a href="https://wa.me/447414768308?text=Hello%20BST%20Auto%20Shield,%20I'd%20like%20to%20enquire%20about%20window%20tinting%20for%20my%20vehicle." target="_blank" rel="noopener noreferrer" class="text-[#25D366] hover:underline font-bold">+44 7414 768308</a></p>
             <p><span class="text-slate-400">Telephone:</span> <a href="tel:+447414768308" class="text-cyan hover:underline">+44 7414 768308</a></p>
           </div>
-          <div class="pt-3 flex gap-3">
+          <div class="pt-3 flex flex-wrap gap-4">
+            <a href="https://wa.me/447414768308?text=Hello%20BST%20Auto%20Shield,%20I'd%20like%20to%20enquire%20about%20window%20tinting%20for%20my%20vehicle." target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-[#25D366] hover:underline inline-flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+              <span>Chat on WhatsApp</span>
+            </a>
             <a href="https://maps.google.com/?q=1+Henson+Way,+Kettering,+NN16+8PX" target="_blank" rel="noopener noreferrer" class="link-ghost-cyan text-xs">
               <span>Google Maps Directions</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
