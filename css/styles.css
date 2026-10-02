@@ -1,0 +1,485 @@
+/* ==========================================================================
+   BST AUTO SHIELD - Official Stylesheet
+   Dark Luxury Automotive Studio Aesthetic
+   Kettering, Northamptonshire, UK
+   ========================================================================== */
+
+:root {
+  --color-canvas: #090b0e;
+  --color-surface-lowest: #0e1116;
+  --color-surface: #14171e;
+  --color-surface-raised: #1b2029;
+  --color-surface-high: #242a36;
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-regular: rgba(255, 255, 255, 0.14);
+  --color-border-cyan: rgba(0, 229, 255, 0.45);
+  
+  --color-cyan: #00e5ff;
+  --color-cyan-bright: #3bf1ff;
+  --color-cyan-dim: rgba(0, 229, 255, 0.12);
+  --color-cyan-glow: rgba(0, 229, 255, 0.3);
+  --color-blue-accent: #0ea5e9;
+
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  background-color: var(--color-canvas);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-canvas);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-cyan);
+  color: #090b0e;
+}
+
+/* Typography Helpers */
+.font-display {
+  font-family: var(--font-heading);
+}
+
+.font-mono-tag {
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+/* Glass & Chamfered Borders */
+.glass-header {
+  background-color: rgba(9, 11, 14, 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--color-border-subtle);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-header.scrolled {
+  background-color: rgba(14, 17, 22, 0.92);
+  border-bottom-color: rgba(0, 229, 255, 0.2);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8);
+}
+
+.glass-panel {
+  background-color: rgba(20, 23, 30, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--color-border-subtle);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-panel-elevated {
+  background-color: rgba(27, 32, 41, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border-regular);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+/* Subtle Technical Card Hover */
+.technical-card {
+  position: relative;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.technical-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-cyan), var(--color-blue-accent));
+  transition: width 0.3s ease;
+  z-index: 2;
+}
+
+.technical-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 229, 255, 0.35);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.7), 0 0 20px -5px rgba(0, 229, 255, 0.12);
+}
+
+.technical-card:hover::before {
+  width: 100%;
+}
+
+/* Subtle Glow Accents */
+.glow-cyan-sm {
+  box-shadow: 0 0 20px -4px rgba(0, 229, 255, 0.25);
+}
+
+.glow-cyan-lg {
+  box-shadow: 0 0 35px -5px rgba(0, 229, 255, 0.3), inset 0 1px 0 rgba(0, 229, 255, 0.4);
+}
+
+/* Radial Gradient Atmospheric Lights */
+.bg-ambient-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(0, 229, 255, 0.08) 0%, transparent 65%);
+}
+
+.bg-ambient-corner {
+  background: radial-gradient(circle at 100% 0%, rgba(14, 165, 233, 0.07) 0%, transparent 50%);
+}
+
+/* Grid Pattern Background */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Primary Button Styling */
+.btn-primary-cyan {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-cyan);
+  color: #090b0e;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--color-cyan);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 229, 255, 0.25);
+}
+
+.btn-primary-cyan:hover {
+  background-color: var(--color-cyan-bright);
+  border-color: var(--color-cyan-bright);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-primary-cyan:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 229, 255, 0.3);
+}
+
+/* Secondary Button Styling */
+.btn-secondary-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: rgba(20, 23, 30, 0.8);
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.875rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--color-border-regular);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary-dark:hover {
+  background-color: var(--color-surface-raised);
+  border-color: rgba(0, 229, 255, 0.5);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-secondary-dark:active {
+  transform: translateY(0);
+}
+
+/* Ghost / Mono Link */
+.link-ghost-cyan {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease, gap 0.2s ease;
+  text-decoration: none;
+}
+
+.link-ghost-cyan:hover {
+  color: var(--color-cyan);
+  gap: 0.625rem;
+}
+
+/* ==========================================================================
+   Interactive Before & After Comparison Slider
+   ========================================================================== */
+.comparison-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  background-color: #0c0e12;
+  border: 1px solid var(--color-border-regular);
+  box-shadow: 0 15px 40px -15px rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 768px) {
+  .comparison-wrapper {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+.comparison-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.comparison-overlay-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%; /* dynamically updated via JS */
+  overflow: hidden;
+  z-index: 2;
+  border-right: 2px solid var(--color-cyan);
+  box-shadow: 4px 0 20px rgba(0, 229, 255, 0.35);
+}
+
+.comparison-overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* width must be fixed to the wrapper's clientWidth via CSS */
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.comparison-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%; /* updated via JS */
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #090b0e;
+  border: 2px solid var(--color-cyan);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.6), 0 4px 15px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: ew-resize;
+  touch-action: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.comparison-handle:hover,
+.comparison-handle.active {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 0 35px rgba(0, 229, 255, 0.85), 0 4px 20px rgba(0, 0, 0, 0.9);
+}
+
+.comparison-handle svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--color-cyan);
+}
+
+/* ==========================================================================
+   Gallery Lightbox Modal
+   ========================================================================== */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(9, 11, 14, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-content {
+  max-width: 1200px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border-regular);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   Form UI Controls
+   ========================================================================== */
+.form-input-dark {
+  width: 100%;
+  background-color: var(--color-surface-lowest);
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-text-primary);
+  border-radius: 0.375rem;
+  padding: 0.875rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  outline: none;
+}
+
+.form-input-dark:focus {
+  background-color: var(--color-surface);
+  border-color: var(--color-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15);
+}
+
+.form-input-dark::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-input-dark:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Service Radio Tile */
+.package-radio-tile {
+  cursor: pointer;
+}
+
+.package-radio-tile input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.package-radio-tile .tile-box {
+  padding: 0.875rem;
+  background-color: var(--color-surface-lowest);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 0.375rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.package-radio-tile input[type="radio"]:checked + .tile-box {
+  border-color: var(--color-cyan);
+  background-color: rgba(0, 229, 255, 0.08);
+  box-shadow: 0 0 15px -3px rgba(0, 229, 255, 0.2);
+}
+
+.package-radio-tile input[type="radio"]:checked + .tile-box .tile-title {
+  color: var(--color-cyan);
+}
+
+/* ==========================================================================
+   Mobile Menu Drawer
+   ========================================================================== */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(9, 11, 14, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.mobile-drawer.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Custom Scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #242a36;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-cyan);
+}

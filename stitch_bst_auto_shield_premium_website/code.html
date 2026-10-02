@@ -1,0 +1,943 @@
+<!DOCTYPE html><html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BST AUTO SHIELD | Precision Automotive Window Tint &amp; Vehicle Protection | Kettering</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&amp;family=Space+Grotesk:wght@400..700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#414753",
+            "surface-tint": "#00daf3",
+            "surface-container-high": "#282a2e",
+            "surface-container-lowest": "#0c0e12",
+            "inverse-surface": "#e2e2e8",
+            "primary-fixed": "#9cf0ff",
+            "error-container": "#93000a",
+            "on-primary-container": "#00626e",
+            "inverse-primary": "#006875",
+            "on-error": "#690005",
+            "on-primary-fixed": "#001f24",
+            "primary-fixed-dim": "#00daf3",
+            "on-surface-variant": "#bac9cc",
+            "tertiary-fixed": "#dde2f2",
+            "on-secondary-fixed-variant": "#004c6e",
+            "tertiary-container": "#cbd0e0",
+            "background": "#111317",
+            "secondary-container": "#00a2e6",
+            "primary-container": "#00e5ff",
+            "inverse-on-surface": "#2f3035",
+            "surface": "#111317",
+            "on-tertiary-fixed": "#161c27",
+            "primary": "#c3f5ff",
+            "surface-bright": "#37393e",
+            "on-secondary": "#00344d",
+            "surface-container": "#1e2024",
+            "secondary": "#89ceff",
+            "on-error-container": "#ffdad6",
+            "surface-container-highest": "#333539",
+            "on-primary": "#00363d",
+            "outline-variant": "#3b494c",
+            "on-surface": "#e2e2e8",
+            "on-tertiary": "#2b313c",
+            "tertiary-fixed-dim": "#c1c6d6",
+            "on-primary-fixed-variant": "#004f58",
+            "on-background": "#e2e2e8",
+            "tertiary": "#e7ecfc",
+            "outline": "#849396",
+            "on-tertiary-container": "#535966",
+            "on-secondary-container": "#00344e",
+            "surface-container-low": "#1a1c20",
+            "secondary-fixed": "#c9e6ff",
+            "surface-variant": "#333539",
+            "surface-dim": "#111317",
+            "error": "#ffb4ab",
+            "secondary-fixed-dim": "#89ceff",
+            "on-secondary-fixed": "#001e2f"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter-mobile": "1rem",
+            "space-md": "1rem",
+            "gutter": "1.5rem",
+            "space-xl": "2.75rem",
+            "margin-mobile": "1.25rem",
+            "space-lg": "1.75rem",
+            "space-2xl": "4rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "margin": "3rem"
+          },
+          "fontFamily": {
+            "body-md": ["Hanken Grotesk"],
+            "label-mono-lg": ["JetBrains Mono"],
+            "headline-xl": ["Space Grotesk"],
+            "body-lg": ["Hanken Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "display-hero-mobile": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "display-hero": ["Space Grotesk"],
+            "headline-xl-mobile": ["Space Grotesk"],
+            "body-sm": ["Hanken Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "label-mono-sm": ["JetBrains Mono"]
+          },
+          "fontSize": {
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-mono-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-lg": ["17px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-mono-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Technical Glow & Laser lines */
+    .glow-cyan {
+      box-shadow: 0 0 35px -5px rgba(0, 229, 255, 0.25), inset 0 1px 0 rgba(0, 229, 255, 0.4);
+    }
+    .glow-cyan-hover:hover {
+      box-shadow: 0 0 25px rgba(0, 229, 255, 0.45);
+    }
+    .chamfer-top {
+      border-top: 1px solid rgba(243, 244, 246, 0.12);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    }
+    .glass-card {
+      background: rgba(26, 28, 32, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    /* Comparison handle */
+    .slider-handle {
+      touch-action: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-fixed overflow-x-hidden antialiased">
+<!-- TOP NAVIGATION (Docked full-width sticky) -->
+<header class="bg-surface/80 dark:bg-surface/80 backdrop-blur-md text-primary-container dark:text-primary-container docked full-width top-0 sticky z-50 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.5)] border-b border-outline-variant/30 dark:border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-6 md:px-12 max-w-[1440px] mx-auto h-20">
+<!-- Brand Logo Cluster -->
+<a class="flex items-center space-x-3 group" href="#">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center p-0.5 bg-surface-container-high border border-outline-variant/40 group-hover:border-primary-container transition-colors">
+<img alt="BST Auto Shield Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WFiJhMi6wkLpu333RrXcS9UNjiowv4wLgtYtInmHQhKhwfD3qmZk9XxGKwFABviNR7eYfNnJ2KwplDxP3Mv2tPYIEu9Aql4j_-l1cgYlRDbFifoX82Zr3BGx6Xj9_FabDizSWZXGDwN8lzwTkKa50h8Y9KhW0vDNte6onFNnlYeDES-ebTOopzADDIZRBSUX5OXfQdO3XjFRQiUY2Wo1BCLrB_ODtr3NAa_PB02WlWfRMDDPqfxSbXtxA1">
+</div>
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm font-bold tracking-tight text-on-surface dark:text-on-surface uppercase">BST AUTO SHIELD</span>
+<span class="text-label-mono-sm font-label-mono-sm text-outline tracking-widest text-[9px]">KETTERING STUDIO • UK</span>
+</div>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden lg:flex items-center space-x-8">
+<a class="text-label-mono-sm font-label-mono-sm uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary-container dark:hover:text-primary-container" href="#services">Services</a>
+<a class="text-label-mono-sm font-label-mono-sm uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary-container dark:hover:text-primary-container" href="#benefits">Why Tint</a>
+<a class="text-label-mono-sm font-label-mono-sm uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary-container dark:hover:text-primary-container" href="#process">The Process</a>
+<a class="text-label-mono-sm font-label-mono-sm uppercase tracking-wider text-primary-container dark:text-primary-container font-semibold border-b-2 border-primary-container pb-1" href="#comparison">Before &amp; After</a>
+<a class="text-label-mono-sm font-label-mono-sm uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary-container dark:hover:text-primary-container" href="#gallery">Gallery</a>
+<a class="text-label-mono-sm font-label-mono-sm uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary-container dark:hover:text-primary-container" href="#contact">Location</a>
+</nav>
+<!-- Trailing CTAs -->
+<div class="flex items-center space-x-3">
+<a class="hidden sm:inline-flex items-center space-x-2 px-4 py-2.5 rounded-lg bg-surface-container-low border border-outline-variant/40 hover:border-primary-container/60 text-on-surface text-label-mono-sm font-label-mono-sm transition-all duration-200" href="tel:+447414768308"><span class="material-symbols-outlined text-primary-container text-[18px]">call</span><span class="">+44 7414 768308</span></a>
+<a class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-lg bg-primary-container text-on-primary-fixed font-headline-sm text-[13px] font-bold tracking-wider uppercase hover:shadow-[0_0_20px_rgba(0,229,255,0.45)] hover:-translate-y-0.5 active:scale-95 transition-all duration-150" href="#quote">
+<span class="">Get a Quote</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<!-- HERO SECTION -->
+<section class="relative pt-8 pb-20 md:pt-16 md:pb-28 overflow-hidden">
+<!-- Atmospheric subtle blue glow background -->
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-primary-container/10 blur-[130px] rounded-full pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
+<!-- Top badges metadata -->
+<div class="flex flex-wrap items-center gap-3 mb-6">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-surface-container border border-outline-variant/40 text-on-surface-variant text-label-mono-sm font-label-mono-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="">100% DUST-FREE STUDIO GRADE</span>
+</div>
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-surface-container border border-outline-variant/40 text-on-surface-variant text-label-mono-sm font-label-mono-sm">
+<span class="material-symbols-outlined text-primary-container text-[14px]">verified</span>
+<span class="">LIFETIME FILM WARRANTY</span>
+</div>
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-surface-container border border-outline-variant/40 text-on-surface-variant text-label-mono-sm font-label-mono-sm">
+<span class="material-symbols-outlined text-secondary text-[14px]">pin_drop</span>
+<span class="">KETTERING, UK</span>
+</div>
+</div>
+<!-- Main Headline Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
+<div class="lg:col-span-8">
+<h1 class="text-display-hero-mobile md:text-display-hero font-display-hero text-on-surface uppercase tracking-tight leading-[1.05]">
+            PROTECT YOUR <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container via-surface-tint to-secondary">DRIVE.</span>
+</h1>
+<p class="mt-4 text-body-lg font-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Professional automotive window tinting and vehicle protection with a clean, precision-focused finish. Engineered in our climate-controlled Kettering studio for uncompromising optical clarity.
+          </p>
+</div>
+<!-- CTA Cluster -->
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
+<a class="w-full inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-xl bg-primary-container text-on-primary-fixed font-headline-sm text-sm font-bold tracking-wider uppercase hover:shadow-[0_0_25px_rgba(0,229,255,0.45)] transition-all duration-200" href="#quote">
+<span class="">Get a Quote</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+<a class="w-full inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-xl bg-surface-container-low border border-outline-variant/60 hover:border-primary-container/70 text-on-surface font-headline-sm text-sm font-medium transition-all duration-200" href="tel:+447414768308"><span class="material-symbols-outlined text-primary-container text-lg">call</span><span class="">Call: +44 7414 768308</span></a>
+</div>
+</div>
+<!-- Hero Visual Showcase Card -->
+<div class="relative w-full rounded-2xl overflow-hidden chamfer-top bg-surface-container-lowest border border-outline-variant/30 glow-cyan">
+<div class="relative aspect-[16/9] md:aspect-[21/9] w-full bg-surface-container-lowest overflow-hidden">
+<img alt="BST Auto Shield Tinted Luxury Vehicle" class="w-full h-full object-cover object-center filter brightness-95 contrast-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyyc5fhTbbrKc-xF4sYSBOus-e5kzJWuixy5zOBVCzhEL6AxnNmx2xchznw1ICw7U3RMDCQ1CK2xh4RHPrE3T31OrRowAYsSqU0URbyE0OcaPXhY-cRTzdfr8yp4MesA7lpSJrLk_lJ4x-xeYmzfg-HsMdSuO13iEt1MnTTO_wkMcfxMcNCs-CmYHNh8eGAf3UkqJ9Vx-q2zLWpzPrmybb5j3W0LACkhSMOK3v8VSjpfD6tx2YkHG_iQ">
+<!-- Gradient Vignette -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface/20"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface/60 via-transparent to-surface/60"></div>
+<!-- Bottom Floating Specs Tag -->
+<div class="absolute bottom-6 left-6 right-6 flex flex-wrap items-center justify-between gap-4 p-4 md:px-6 rounded-xl glass-card border border-outline-variant/30">
+<div class="flex items-center space-x-4">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_10px_#00e5ff]"></div>
+<div>
+<p class="text-label-mono-sm font-label-mono-sm text-on-surface uppercase tracking-wider">Nano-Ceramic IR Series Applied</p>
+<p class="text-body-sm font-body-sm text-outline">Custom 20% Front / 5% Privacy Glass Matrix</p>
+</div>
+</div>
+<div class="hidden sm:flex items-center space-x-6">
+<div class="text-right">
+<span class="text-label-mono-sm font-label-mono-sm text-primary-container block">99%</span>
+<span class="text-[10px] uppercase font-label-mono-sm text-outline">UV Rejection</span>
+</div>
+<div class="h-6 w-px bg-outline-variant/40"></div>
+<div class="text-right">
+<span class="text-label-mono-sm font-label-mono-sm text-primary-container block">88%</span>
+<span class="text-[10px] uppercase font-label-mono-sm text-outline">IR Heat Barrier</span>
+</div>
+<div class="h-6 w-px bg-outline-variant/40"></div>
+<div class="text-right">
+<span class="text-label-mono-sm font-label-mono-sm text-primary-container block">ZERO</span>
+<span class="text-[10px] uppercase font-label-mono-sm text-outline">Signal Interference</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SERVICES SECTION -->
+<section class="py-20 md:py-28 bg-surface-container-lowest/50 border-t border-b border-outline-variant/20 relative" id="services">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<div class="flex items-center space-x-2 text-primary-container text-label-mono-sm font-label-mono-sm uppercase tracking-widest mb-2">
+<span class="material-symbols-outlined text-sm">shield</span>
+<span class="">Armor-Grade Craftsmanship</span>
+</div>
+<h2 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface uppercase tracking-tight">
+            PRECISION PROTECTION SERVICES
+          </h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-md">
+          Tailored automotive glass and surface protection engineered to perfection inside our Kettering technical facility.
+        </p>
+</div>
+<!-- Bento-style Grid for Services -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group p-8 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary-container/60 transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 h-1 w-0 group-hover:w-full bg-primary-container transition-all duration-300"></div>
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/40 text-primary-container mb-6 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">layers</span>
+</div>
+<div class="text-label-mono-sm font-label-mono-sm text-outline mb-2">SERVICE 01</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-3">Window Tinting</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+              Flawless heat-formed nano-ceramic films custom fitted to each window contour without bubbles, peeling, or hazy distortion.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/30 flex items-center justify-between text-label-mono-sm font-label-mono-sm text-outline group-hover:text-primary-container transition-colors">
+<span class="">OPTICAL PRECISION</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group p-8 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary-container/60 transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 h-1 w-0 group-hover:w-full bg-primary-container transition-all duration-300"></div>
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/40 text-primary-container mb-6 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">visibility_off</span>
+</div>
+<div class="text-label-mono-sm font-label-mono-sm text-outline mb-2">SERVICE 02</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-3">Vehicle Privacy Tint</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+              Bespoke shading grades from subtle factory smoked look to maximum privacy limo tint, concealing valuables and rear passengers.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/30 flex items-center justify-between text-label-mono-sm font-label-mono-sm text-outline group-hover:text-primary-container transition-colors">
+<span class="">5% TO 70% VLT OPACITY</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group p-8 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary-container/60 transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 h-1 w-0 group-hover:w-full bg-primary-container transition-all duration-300"></div>
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/40 text-primary-container mb-6 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">thermostat</span>
+</div>
+<div class="text-label-mono-sm font-label-mono-sm text-outline mb-2">SERVICE 03</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-3">Heat &amp; Glare Reduction</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+              Advanced multi-layer infrared rejection keeping cabin temperatures cool and eyes protected from blinding solar glare.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/30 flex items-center justify-between text-label-mono-sm font-label-mono-sm text-outline group-hover:text-primary-container transition-colors">
+<span class="">INFRARED REJECTION</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group p-8 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary-container/60 transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 h-1 w-0 group-hover:w-full bg-primary-container transition-all duration-300"></div>
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/40 text-primary-container mb-6 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">security</span>
+</div>
+<div class="text-label-mono-sm font-label-mono-sm text-outline mb-2">SERVICE 04</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-3">Automotive Protection</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+              High-impact protection shielding your vehicle interior, dashboard, and delicate leather upholstery from irreversible UV degradation.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/30 flex items-center justify-between text-label-mono-sm font-label-mono-sm text-outline group-hover:text-primary-container transition-colors">
+<span class="">UV BLOCKING SHIELD</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</div>
+</div>
+<!-- Card 5 (Spanning 2 columns on lg for aesthetic balance) -->
+<div class="lg:col-span-2 group p-8 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary-container/60 transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 h-1 w-0 group-hover:w-full bg-primary-container transition-all duration-300"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/40 text-primary-container mb-6 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">tune</span>
+</div>
+<div class="text-label-mono-sm font-label-mono-sm text-outline mb-2">SERVICE 05</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-3">Custom Tint Solutions</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                Tailored shade configurations for coupes, executive saloons, SUVs, commercial fleets, and aerodynamic sunstrips. Customized to your exact aesthetic profile.
+              </p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-high/40 border border-outline-variant/30 space-y-3">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface">Sunstrips &amp; Windscreen Banners</span>
+<span class="text-primary-container font-label-mono-sm">Precision Level</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface">SUV &amp; Fleet Protection Packages</span>
+<span class="text-primary-container font-label-mono-sm">Commercial</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface">Factory Dot-Matrix Glass Prep</span>
+<span class="text-primary-container font-label-mono-sm">Bespoke Edge</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/30 flex items-center justify-between text-label-mono-sm font-label-mono-sm text-outline group-hover:text-primary-container transition-colors">
+<span class="">FULL PORTFOLIO SPECIFICATIONS</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- "WHY TINT?" (BENEFITS) SECTION -->
+<section class="py-20 md:py-28 relative" id="benefits">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<div class="inline-flex items-center space-x-2 text-primary-container text-label-mono-sm font-label-mono-sm uppercase tracking-widest mb-3">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="">Engineered Advantages</span>
+</div>
+<h2 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface uppercase tracking-tight">
+          WHY TINT WITH BST AUTO SHIELD?
+        </h2>
+<p class="mt-4 text-body-md font-body-md text-on-surface-variant">
+          Advanced nano-ceramic tint formulations designed to upgrade vehicle security, drive comfort, and exterior styling without compromises.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pillar 1 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary-container/40 transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="text-primary-container text-label-mono-lg font-label-mono-lg mb-4">01 // PRIVACY</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Enhanced Privacy</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Can provide enhanced cabin privacy and peace of mind for passengers and concealed cargo against opportunistic glances.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center space-x-2 text-[11px] font-label-mono-sm text-outline">
+<span class="material-symbols-outlined text-sm text-primary-container">lock</span>
+<span class="">SHIELDED INTERIOR</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary-container/40 transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="text-primary-container text-label-mono-lg font-label-mono-lg mb-4">02 // CLARITY</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Reduced Glare</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Can help reduce harsh solar glare and headlight dazzle during bright summer days and nighttime high-speed motorway driving.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center space-x-2 text-[11px] font-label-mono-sm text-outline">
+<span class="material-symbols-outlined text-sm text-primary-container">wb_sunny</span>
+<span class="">OPTICAL POLARIZATION</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary-container/40 transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="text-primary-container text-label-mono-lg font-label-mono-lg mb-4">03 // DEFENSE</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">UV Protection</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Engineered to block up to 99% of damaging UV rays, helping protect sensitive skin and prevent costly interior leather fading and cracking.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center space-x-2 text-[11px] font-label-mono-sm text-outline">
+<span class="material-symbols-outlined text-sm text-primary-container">grade</span>
+<span class="">99% UV REJECTION</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary-container/40 transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="text-primary-container text-label-mono-lg font-label-mono-lg mb-4">04 // STYLING</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Refined Appearance</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Delivers a sleek, uniform, aggressive exterior aesthetic that complements any luxury, executive, or modern sports vehicle silhouette.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center space-x-2 text-[11px] font-label-mono-sm text-outline">
+<span class="material-symbols-outlined text-sm text-primary-container">auto_awesome</span>
+<span class="">SHOWROOM FINISH</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BEFORE / AFTER COMPARISON SLIDER FEATURE -->
+<section class="py-20 md:py-28 bg-surface-container-lowest border-t border-b border-outline-variant/30 relative" id="comparison">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<div class="flex items-center space-x-2 text-primary-container text-label-mono-sm font-label-mono-sm uppercase tracking-widest mb-2">
+<span class="material-symbols-outlined text-sm">compare</span>
+<span class="">Side-by-Side Optical Proof</span>
+</div>
+<h2 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface uppercase tracking-tight">
+            SEE WHAT THE DIFFERENCE LOOKS LIKE
+          </h2>
+</div>
+<!-- Metric callout pills -->
+<div class="flex flex-wrap gap-2">
+<div class="px-3 py-1.5 rounded bg-surface-container border border-outline-variant/40 text-on-surface text-label-mono-sm font-label-mono-sm">
+<span class="text-primary-container">●</span> Infrared Heat Rejection
+          </div>
+<div class="px-3 py-1.5 rounded bg-surface-container border border-outline-variant/40 text-on-surface text-label-mono-sm font-label-mono-sm">
+<span class="text-primary-container">●</span> Glare Diffusion
+          </div>
+<div class="px-3 py-1.5 rounded bg-surface-container border border-outline-variant/40 text-on-surface text-label-mono-sm font-label-mono-sm">
+<span class="text-primary-container">●</span> Enhanced Privacy Profile
+          </div>
+</div>
+</div>
+<!-- Comparison Component Card -->
+<div class="relative rounded-2xl overflow-hidden border border-outline-variant/40 bg-surface-container-low shadow-[0_10px_40px_-15px_rgba(0,0,0,0.8)]">
+<!-- Interactive Split Container -->
+<div class="relative w-full aspect-[16/9] md:aspect-[21/9] select-none overflow-hidden" id="comparison-stage">
+<!-- Base Image (Split Comparison Provided Asset) -->
+<img alt="Untinted Factory Glass vs Nano-Ceramic Window Tint" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGrqMaqts_GzuOxrgUnEIlHUj7W5hgzBEhXnOvUPHt2BAhFqgpPXPvrR3_GJtvckXwGg2ZjdQpArRVQfot7TLd4FK8fhljd8AHrTKojn1O1BapH-jm9ac2I1R97K0t4y1Y1_yv6O_IKD9Xx5Ct2o3qppaYwoQHPV6Hp-IdZvTskqp2Q4MxlI6f71PtK8--U-eXBXyscexnXfNo7K-mgtvtH6URo5CHRCaTkllMLC4oYUTiXeCauOL-JA">
+<!-- Overlay Visual Badges -->
+<div class="absolute top-6 left-6 z-20 pointer-events-none">
+<div class="px-4 py-2 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/50 text-label-mono-sm font-label-mono-sm text-on-surface-variant flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="">LEFT: Untinted Factory Glass (Heat &amp; Glare Intrusion)</span>
+</div>
+</div>
+<div class="absolute top-6 right-6 z-20 pointer-events-none">
+<div class="px-4 py-2 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md border border-primary-container/40 text-label-mono-sm font-label-mono-sm text-primary-container flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#00e5ff]"></span>
+<span class="">RIGHT: Precision Nano-Ceramic Tint (99% UV Block)</span>
+</div>
+</div>
+<!-- Bottom bar stats summary on the card -->
+<div class="absolute bottom-6 left-6 right-6 z-20 pointer-events-none hidden md:flex justify-between items-center px-6 py-3 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/40">
+<div class="text-body-sm font-body-sm text-on-surface">
+              Noticeable glare elimination, interior thermal comfort preservation, and concealed passenger compartment.
+            </div>
+<div class="text-label-mono-sm font-label-mono-sm text-primary-container tracking-wider uppercase">
+              STUDIO TESTED SPECIFICATION
+            </div>
+</div>
+</div>
+<!-- Action Banner under comparison -->
+<div class="p-6 md:p-8 bg-surface-container flex flex-col md:flex-row items-center justify-between gap-6 border-t border-outline-variant/30">
+<div>
+<h4 class="text-headline-sm font-headline-sm text-on-surface mb-1">Ready to upgrade your vehicle's thermal comfort &amp; styling?</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">We provide custom shade simulations and precise heat-mold fittings for any vehicle.</p>
+</div>
+<a class="inline-flex items-center space-x-3 px-8 py-3.5 rounded-xl bg-primary-container text-on-primary-fixed font-headline-sm text-sm font-bold tracking-wider uppercase hover:shadow-[0_0_20px_rgba(0,229,255,0.45)] whitespace-nowrap transition-all duration-150" href="#quote">
+<span class="">Book Your Vehicle</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- PROCESS SECTION (01 - 04) -->
+<section class="py-20 md:py-28 relative" id="process">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12">
+<div class="text-center max-w-2xl mx-auto mb-20">
+<div class="inline-flex items-center space-x-2 text-primary-container text-label-mono-sm font-label-mono-sm uppercase tracking-widest mb-3">
+<span class="material-symbols-outlined text-sm">settings_suggest</span>
+<span class="">Cleanroom Methodology</span>
+</div>
+<h2 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface uppercase tracking-tight">
+          THE PRECISION PROCESS
+        </h2>
+<p class="mt-4 text-body-md font-body-md text-on-surface-variant">
+          Four meticulous stages performed in our controlled Kettering studio environment to ensure an immaculate, zero-defect installation.
+        </p>
+</div>
+<!-- Process Workflow Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+<!-- Step 1 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/30 relative flex flex-col justify-between">
+<div class="text-primary-container text-label-mono-lg font-label-mono-lg mb-6 flex justify-between items-center">
+<span class="">STAGE 01</span>
+<span class="material-symbols-outlined text-outline">search</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Vehicle Assessment</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Comprehensive inspection of glass curvature, factory dot-matrix edges, and a personalized tint shade consultation matched to your lifestyle.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/20 text-[10px] font-label-mono-sm text-outline uppercase tracking-wider">
+            STEP 1: PRE-INSPECTION
+          </div>
+</div>
+<!-- Step 2 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/30 relative flex flex-col justify-between">
+<div class="text-primary-container text-label-mono-lg font-label-mono-lg mb-6 flex justify-between items-center">
+<span class="">STAGE 02</span>
+<span class="material-symbols-outlined text-outline">data_object</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Tint Selection &amp; Cut</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Choosing optimal optical ceramic film percentage followed by high-precision digital plotter cuts conforming precisely to your vehicle glass templates.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/20 text-[10px] font-label-mono-sm text-outline uppercase tracking-wider">
+            STEP 2: COMPUTER TEMPLATE
+          </div>
+</div>
+<!-- Step 3 (With Featured Photo) -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-primary-container/40 relative flex flex-col justify-between glow-cyan">
+<div class="text-primary-container text-label-mono-lg font-label-mono-lg mb-4 flex justify-between items-center">
+<span class="">STAGE 03</span>
+<span class="material-symbols-outlined text-primary-container">precision_manufacturing</span>
+</div>
+<div class="mb-4 rounded-lg overflow-hidden border border-outline-variant/40 aspect-[4/3]">
+<img alt="Precision window tint installation in cleanroom" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAly0exAYkLAJwQNG_Kd4Mg3zADZTyc9yTMKJsCjPOXreZfddJD29r23lCxf_-yW6HamEma33699VJ0vxvblLI8Lsif_Zds6iwdzAmVvdDABtD2lczGtsiK5pi8YtHxi_s9chYlt4urrJ0F3iijuHH9qIcuw9NbUvam73WbCj0MgxLEQL7JTC7znCd8Ap-osNKm3TdSgESNEFQd_ZghJPrHqw4rCvv9sj5ogyuEQedCc2jyqmHaK6P6Mw">
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Precision Installation</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Cleanroom application using slip solution, microfiber decontamination, micro-squeegee moisture extraction, and thermal heat shrinking.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 text-[10px] font-label-mono-sm text-primary-container uppercase tracking-wider">
+            STEP 3: CLEANROOM APPLICATION
+          </div>
+</div>
+<!-- Step 4 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/30 relative flex flex-col justify-between">
+<div class="text-primary-container text-label-mono-lg font-label-mono-lg mb-6 flex justify-between items-center">
+<span class="">STAGE 04</span>
+<span class="material-symbols-outlined text-outline">verified</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Final Inspection &amp; Cure</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Micro-inspection under 360-degree studio inspection lighting ensuring zero bubbles or edge lifts before vehicle hand-back with warranty packet.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/20 text-[10px] font-label-mono-sm text-outline uppercase tracking-wider">
+            STEP 4: HAND-BACK ASSURANCE
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- GALLERY SHOWROOM -->
+<section class="py-20 md:py-28 bg-surface-container-lowest border-t border-b border-outline-variant/20 relative" id="gallery">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<div class="flex items-center space-x-2 text-primary-container text-label-mono-sm font-label-mono-sm uppercase tracking-widest mb-2">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+<span class="">Studio Portfolio</span>
+</div>
+<h2 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface uppercase tracking-tight">
+            FINISHED CLIENT VEHICLES
+          </h2>
+</div>
+<!-- Gallery Filter Tabs -->
+<div class="flex flex-wrap gap-2" id="gallery-filters">
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary-fixed text-label-mono-sm font-label-mono-sm font-bold uppercase transition-all">All</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container border border-outline-variant/30 text-on-surface-variant hover:text-on-surface text-label-mono-sm font-label-mono-sm uppercase transition-all">Cars</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container border border-outline-variant/30 text-on-surface-variant hover:text-on-surface text-label-mono-sm font-label-mono-sm uppercase transition-all">Tint</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container border border-outline-variant/30 text-on-surface-variant hover:text-on-surface text-label-mono-sm font-label-mono-sm uppercase transition-all">Finished Work</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container border border-outline-variant/30 text-on-surface-variant hover:text-on-surface text-label-mono-sm font-label-mono-sm uppercase transition-all">Detail</button>
+</div>
+</div>
+<!-- Luxury Gallery Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+<!-- Gallery Item 1 (Wide Hero Coupe) -->
+<div class="lg:col-span-8 group rounded-xl overflow-hidden bg-surface-container-low border border-outline-variant/30 relative aspect-[16/10]">
+<img alt="Porsche luxury sports coupe with deep glossy tint" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyyc5fhTbbrKc-xF4sYSBOus-e5kzJWuixy5zOBVCzhEL6AxnNmx2xchznw1ICw7U3RMDCQ1CK2xh4RHPrE3T31OrRowAYsSqU0URbyE0OcaPXhY-cRTzdfr8yp4MesA7lpSJrLk_lJ4x-xeYmzfg-HsMdSuO13iEt1MnTTO_wkMcfxMcNCs-CmYHNh8eGAf3UkqJ9Vx-q2zLWpzPrmybb5j3W0LACkhSMOK3v8VSjpfD6tx2YkHG_iQ">
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+<div>
+<span class="px-2.5 py-1 rounded bg-surface-container-high/80 backdrop-blur-md border border-outline-variant/40 text-[10px] font-label-mono-sm text-primary-container uppercase tracking-wider mb-2 inline-block">
+                PREMIUM CERAMIC 20%
+              </span>
+<h3 class="text-headline-md font-headline-md text-on-surface">Porsche 911 GT Series</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Full Side &amp; Rear Privacy Film Application</p>
+</div>
+<span class="w-10 h-10 rounded-full bg-surface-container border border-outline-variant/40 flex items-center justify-center text-on-surface group-hover:border-primary-container group-hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-lg">north_east</span>
+</span>
+</div>
+</div>
+<!-- Gallery Item 2 (Saloon with Limo Privacy) -->
+<div class="lg:col-span-4 group rounded-xl overflow-hidden bg-surface-container-low border border-outline-variant/30 relative aspect-[16/10] lg:aspect-auto">
+<img alt="Blacked out luxury executive saloon rear limo tint" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDwkNqokE6az5yMiL8XDtBawul81UKl7d3Z1pI7f985JyziuOXLl8ih3AyVpuFoQRbQgv-3vu-7UXSTowW1np4xxCdV5FrRyaReIOdV3jDEqEQGdqPgo7cwg-XrJAJ_50RpIS1UTJqU88IMRbhM3TjxpxvlQULgffbdpBZspCA6_aWD7oY1ETQcb3GBLxLatM5rc7gDFushNN47fKaDvoaOfOBiqiFcuaXrQQjZJQnqLK-OTI-ovuX2w">
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="px-2.5 py-1 rounded bg-surface-container-high/80 backdrop-blur-md border border-outline-variant/40 text-[10px] font-label-mono-sm text-secondary uppercase tracking-wider mb-2 inline-block">
+              5% LIMO PRIVACY REAR
+            </span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Executive Performance Saloon</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Maximum UV Rejection &amp; Passenger Security</p>
+</div>
+</div>
+<!-- Gallery Item 3 (Installation Craftsmanship) -->
+<div class="lg:col-span-5 group rounded-xl overflow-hidden bg-surface-container-low border border-outline-variant/30 relative aspect-[16/10]">
+<img alt="Precision tint technician squeegee craftsmanship" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAly0exAYkLAJwQNG_Kd4Mg3zADZTyc9yTMKJsCjPOXreZfddJD29r23lCxf_-yW6HamEma33699VJ0vxvblLI8Lsif_Zds6iwdzAmVvdDABtD2lczGtsiK5pi8YtHxi_s9chYlt4urrJ0F3iijuHH9qIcuw9NbUvam73WbCj0MgxLEQL7JTC7znCd8Ap-osNKm3TdSgESNEFQd_ZghJPrHqw4rCvv9sj5ogyuEQedCc2jyqmHaK6P6Mw">
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="px-2.5 py-1 rounded bg-surface-container-high/80 backdrop-blur-md border border-outline-variant/40 text-[10px] font-label-mono-sm text-primary-container uppercase tracking-wider mb-2 inline-block">
+              CLEANROOM DETAIL
+            </span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Micro-Edge Thermal Shrinking</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Zero dot-matrix fraying or air gap entrapment</p>
+</div>
+</div>
+<!-- Gallery Item 4 (Optical Split Demonstration) -->
+<div class="lg:col-span-7 group rounded-xl overflow-hidden bg-surface-container-low border border-outline-variant/30 relative aspect-[16/10]">
+<img alt="Side by side tint comparison in workshop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGrqMaqts_GzuOxrgUnEIlHUj7W5hgzBEhXnOvUPHt2BAhFqgpPXPvrR3_GJtvckXwGg2ZjdQpArRVQfot7TLd4FK8fhljd8AHrTKojn1O1BapH-jm9ac2I1R97K0t4y1Y1_yv6O_IKD9Xx5Ct2o3qppaYwoQHPV6Hp-IdZvTskqp2Q4MxlI6f71PtK8--U-eXBXyscexnXfNo7K-mgtvtH6URo5CHRCaTkllMLC4oYUTiXeCauOL-JA">
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+<div>
+<span class="px-2.5 py-1 rounded bg-surface-container-high/80 backdrop-blur-md border border-outline-variant/40 text-[10px] font-label-mono-sm text-primary-container uppercase tracking-wider mb-2 inline-block">
+                OPTICAL DENSITY COMPARISON
+              </span>
+<h3 class="text-headline-md font-headline-md text-on-surface">Precision Shade Modulation</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Side-by-side verification before final vehicle clearance</p>
+</div>
+<span class="w-10 h-10 rounded-full bg-surface-container border border-outline-variant/40 flex items-center justify-center text-on-surface group-hover:border-primary-container group-hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-lg">north_east</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTACT & QUOTE REQUEST SECTION -->
+<section class="py-20 md:py-28 relative" id="contact">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12" id="quote">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Business Credentials & Location -->
+<div class="lg:col-span-5 space-y-8">
+<div>
+<div class="flex items-center space-x-2 text-primary-container text-label-mono-sm font-label-mono-sm uppercase tracking-widest mb-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="">Kettering Studio Location</span>
+</div>
+<h2 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface uppercase tracking-tight">
+              BST AUTO SHIELD
+            </h2>
+<p class="mt-3 text-body-md font-body-md text-on-surface-variant">
+              Visit our bespoke automotive protection facility. We welcome consultations by appointment for shade inspections and personalized proposals.
+            </p>
+</div>
+<!-- Credential Details Cards -->
+<div class="space-y-4">
+<div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/30 flex items-start space-x-4"><div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container shrink-0 border border-outline-variant/30"><span class="material-symbols-outlined text-xl">pin_drop</span></div><div><h4 class="text-headline-sm font-headline-sm text-sm font-semibold text-on-surface">Studio Address</h4><p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">1 Henson Way, Kettering NN16 8PX, United Kingdom</p><p class="text-label-mono-sm font-label-mono-sm text-primary-container mt-1">Plus Code: C754+HM Kettering, UK</p></div></div>
+<div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/30 flex items-start space-x-4"><div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container shrink-0 border border-outline-variant/30"><span class="material-symbols-outlined text-xl">call</span></div><div><h4 class="text-headline-sm font-headline-sm text-sm font-semibold text-on-surface">Direct Telephone</h4><a class="text-body-lg font-body-lg font-semibold text-primary-container hover:underline block mt-0.5" href="tel:+447414768308">+44 7414 768308 / 07414 768308</a><p class="text-label-mono-sm font-label-mono-sm text-outline mt-1">Available for quick calls &amp; WhatsApp inquiries</p></div></div>
+<div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/30 flex items-start space-x-4"><div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container shrink-0 border border-outline-variant/30"><span class="material-symbols-outlined text-xl">schedule</span></div><div><h4 class="text-headline-sm font-headline-sm text-sm font-semibold text-on-surface">Operating Hours</h4><p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Monday – Saturday: 9:00 am – 9:00 pm</p><p class="text-label-mono-sm font-label-mono-sm text-outline mt-1">Sunday: Closed</p></div></div>
+</div>
+<!-- Stylized Dark Mode Map Placeholder with Location Pin -->
+<div class="relative rounded-xl overflow-hidden border border-outline-variant/40 bg-surface-container-high h-56 flex flex-col justify-between p-6">
+<!-- Background Map Abstract Styling -->
+<div class="absolute inset-0 opacity-20 bg-[radial-gradient(#3b494c_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/70 to-transparent"></div>
+<div class="relative z-10 flex justify-between items-start">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface text-label-mono-sm font-label-mono-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="">BST AUTO SHIELD STUDIO</span>
+</div>
+<a class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-fixed text-label-mono-sm font-label-mono-sm uppercase font-bold flex items-center space-x-1 hover:shadow-[0_0_15px_rgba(0,229,255,0.4)] transition-all" href="https://maps.google.com/?q=1+Henson+Way,+Kettering,+NN16+8PX" rel="noopener noreferrer" target="_blank">
+<span class="">Directions</span>
+<span class="material-symbols-outlined text-sm">directions</span>
+</a>
+</div>
+<div class="relative z-10 flex items-center space-x-3">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-base">pin_drop</span>
+</div>
+<div>
+<p class="text-body-sm font-body-sm font-semibold text-on-surface">1 Henson Way, Kettering, NN16 8PX</p>
+<p class="text-[11px] font-label-mono-sm text-outline">Plus Code: C754+HM Kettering • Quick access via A14 J7</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Quote Request Form -->
+<div class="lg:col-span-7">
+<div class="p-8 md:p-10 rounded-2xl bg-surface-container-low border border-outline-variant/40 chamfer-top glow-cyan">
+<div class="mb-8">
+<div class="flex items-center space-x-2 text-primary-container text-label-mono-sm font-label-mono-sm uppercase tracking-wider mb-2">
+<span class="material-symbols-outlined text-sm">send</span>
+<span class="">Fast Studio Quote</span>
+</div>
+<h3 class="text-headline-lg font-headline-lg text-on-surface uppercase tracking-tight">
+                REQUEST A QUOTE
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+                Fill in your vehicle specifications below for a same-day custom tint estimate and scheduling availability.
+              </p>
+</div>
+<form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you for contacting BST AUTO SHIELD. A technician will review your vehicle specifications and call you shortly at +44 7414 768308.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Name -->
+<div>
+<label class="block text-label-mono-sm font-label-mono-sm uppercase text-outline mb-2">
+                    Client Name *
+                  </label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant/50 text-on-surface placeholder:text-outline-variant/60 focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors" placeholder="e.g. Alexander Vance" required="" type="text">
+</div>
+<!-- Phone -->
+<div>
+<label class="block text-label-mono-sm font-label-mono-sm uppercase text-outline mb-2">
+                    Phone Number *
+                  </label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant/50 text-on-surface placeholder:text-outline-variant/60 focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors" placeholder="e.g. +44 7414 768308" required="" type="tel">
+</div>
+</div>
+<!-- Vehicle Make & Model -->
+<div>
+<label class="block text-label-mono-sm font-label-mono-sm uppercase text-outline mb-2">
+                  Vehicle Make, Model &amp; Year *
+                </label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant/50 text-on-surface placeholder:text-outline-variant/60 focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors" placeholder="e.g. Porsche 911 GT3 (2023) or BMW M3 Competition" required="" type="text">
+</div>
+<!-- Tint / Service Selector -->
+<div>
+<label class="block text-label-mono-sm font-label-mono-sm uppercase text-outline mb-2">
+                  Select Requested Protection Package
+                </label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="package" type="radio">
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/50 peer-checked:border-primary-container peer-checked:bg-surface-container-high peer-checked:text-primary-container text-center transition-all">
+<span class="block text-label-mono-sm font-label-mono-sm uppercase">Full Vehicle</span>
+<span class="text-[10px] text-outline block mt-0.5">Sides &amp; Rear</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="package" type="radio">
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/50 peer-checked:border-primary-container peer-checked:bg-surface-container-high peer-checked:text-primary-container text-center transition-all">
+<span class="block text-label-mono-sm font-label-mono-sm uppercase">Rear Privacy</span>
+<span class="text-[10px] text-outline block mt-0.5">B-Pillar Back</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="package" type="radio">
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/50 peer-checked:border-primary-container peer-checked:bg-surface-container-high peer-checked:text-primary-container text-center transition-all">
+<span class="block text-label-mono-sm font-label-mono-sm uppercase">Sunstrip</span>
+<span class="text-[10px] text-outline block mt-0.5">Windscreen</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="package" type="radio">
+<div class="p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/50 peer-checked:border-primary-container peer-checked:bg-surface-container-high peer-checked:text-primary-container text-center transition-all">
+<span class="block text-label-mono-sm font-label-mono-sm uppercase">UV Shield</span>
+<span class="text-[10px] text-outline block mt-0.5">Clear Ceramic</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Message / Preferred Date -->
+<div>
+<label class="block text-label-mono-sm font-label-mono-sm uppercase text-outline mb-2">
+                  Additional Notes or Preferred Booking Window
+                </label>
+<textarea class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant/50 text-on-surface placeholder:text-outline-variant/60 focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-colors" placeholder="Tell us if you prefer a specific shade (e.g. 5% Limo, 20% Dark Smoke, 35% Medium), or if you require rapid same-day turnaround." rows="3"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="w-full py-4 rounded-xl bg-primary-container text-on-primary-fixed font-headline-sm text-sm font-bold tracking-wider uppercase hover:shadow-[0_0_25px_rgba(0,229,255,0.5)] active:scale-[0.99] transition-all duration-150 flex items-center justify-center space-x-2" type="submit">
+<span class="">Get Instant Quote &amp; Booking Confirmation</span>
+<span class="material-symbols-outlined text-base">check_circle</span>
+</button>
+<div class="flex items-center justify-center space-x-6 text-[11px] font-label-mono-sm text-outline">
+<span class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-xs text-primary-container">lock</span>
+<span class="">100% Privacy Respected</span>
+</span>
+<span class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-xs text-primary-container">schedule</span>
+<span class="">Average Reply &lt; 30 Mins</span>
+</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- STICKY FLOATING QUICK ACTION PILL BAR (Mobile & Quick Desktop Access) -->
+<aside aria-label="Quick Actions" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 max-w-fit px-3 py-2 rounded-full glass-card border border-outline-variant/50 shadow-[0_8px_32px_rgba(0,0,0,0.6)] glow-cyan flex items-center space-x-2">
+<a class="flex items-center space-x-2 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-label-mono-sm font-label-mono-sm transition-colors" href="tel:+447414768308"><span class="material-symbols-outlined text-primary-container text-[16px]">call</span><span class="hidden sm:inline">CALL:</span><span class="font-bold">+44 7414 768308</span></a>
+<div class="h-4 w-px bg-outline-variant/40"></div>
+<a class="flex items-center space-x-1.5 px-4 py-1.5 rounded-full bg-primary-container text-on-primary-fixed text-label-mono-sm font-label-mono-sm font-bold uppercase hover:shadow-[0_0_15px_rgba(0,229,255,0.4)] transition-all" href="#quote">
+<span class="">Get Quote</span>
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+</a>
+<div class="h-4 w-px bg-outline-variant/40"></div>
+<a class="flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-label-mono-sm font-label-mono-sm transition-colors" href="https://maps.google.com/?q=1+Henson+Way,+Kettering,+NN16+8PX" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-secondary text-[16px]">directions</span>
+<span class="hidden md:inline">1 Henson Way, Kettering</span>
+<span class="md:hidden">Map</span>
+</a>
+</aside>
+<!-- FOOTER -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest text-primary-container dark:text-primary-container full-width bottom border-t border-outline-variant/20 dark:border-outline-variant/20">
+<div class="w-full max-w-[1440px] mx-auto px-6 md:px-12 py-16 flex flex-col justify-between">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-outline-variant/20">
+<!-- Brand & Details -->
+<div class="lg:col-span-5 space-y-4">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center p-0.5 bg-surface-container border border-outline-variant/40">
+<img alt="BST Auto Shield Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WFiJhMi6wkLpu333RrXcS9UNjiowv4wLgtYtInmHQhKhwfD3qmZk9XxGKwFABviNR7eYfNnJ2KwplDxP3Mv2tPYIEu9Aql4j_-l1cgYlRDbFifoX82Zr3BGx6Xj9_FabDizSWZXGDwN8lzwTkKa50h8Y9KhW0vDNte6onFNnlYeDES-ebTOopzADDIZRBSUX5OXfQdO3XjFRQiUY2Wo1BCLrB_ODtr3NAa_PB02WlWfRMDDPqfxSbXtxA1">
+</div>
+<span class="text-headline-md font-headline-md font-bold tracking-tight text-on-surface dark:text-on-surface uppercase">BST AUTO SHIELD</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant max-w-sm">BST AUTO SHIELD — Automotive window tinting and protection. 1 Henson Way, Kettering NN16 8PX, UK. Tel: +44 7414 768308. Bespoke cleanroom installation studio dedicated to luxury, sport, and everyday vehicles.</p>
+<div class="flex items-center space-x-3 text-label-mono-sm font-label-mono-sm text-outline">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="">CLEANROOM ACCREDITED STUDIO</span>
+</div>
+</div>
+<!-- Links Column 1 -->
+<div class="lg:col-span-3">
+<h4 class="text-headline-sm font-headline-sm text-sm uppercase text-on-surface font-semibold mb-4">Protection Services</h4>
+<ul class="space-y-2.5">
+<li class=""><a class="text-body-sm font-body-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary-container dark:hover:text-primary-container transition-colors duration-200" href="#services">PPF Installation</a></li>
+<li class=""><a class="text-body-sm font-body-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary-container dark:hover:text-primary-container transition-colors duration-200" href="#services">Window Film Specs</a></li>
+<li class=""><a class="text-body-sm font-body-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary-container dark:hover:text-primary-container transition-colors duration-200" href="#services">Ceramic Coating</a></li>
+<li class=""><a class="text-body-sm font-body-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary-container dark:hover:text-primary-container transition-colors duration-200" href="#process">Cleanroom Standards</a></li>
+</ul>
+</div>
+<!-- Links Column 2 -->
+<div class="lg:col-span-4">
+<h4 class="text-headline-sm font-headline-sm text-sm uppercase text-on-surface font-semibold mb-4">Studio Location</h4>
+<div class="text-body-sm font-body-sm text-on-surface-variant space-y-1"><p class="font-medium text-on-surface">BST Auto Shield Studio</p><p class="">1 Henson Way, Kettering, NN16 8PX</p><p class="">Northamptonshire, UK (Plus Code: C754+HM)</p><p class="pt-1"><strong class="text-on-surface">Mon – Sat:</strong> 9:00 am – 9:00 pm • <strong class="text-on-surface">Sun:</strong> Closed</p><p class="pt-1"><strong class="text-on-surface">Telephone:</strong> +44 7414 768308</p></div>
+<div class="mt-4 flex space-x-3">
+<a class="text-label-mono-sm font-label-mono-sm text-primary-container hover:underline uppercase" href="tel:+447414768308">Call Workshop</a>
+<span class="text-outline">/</span>
+<a class="text-label-mono-sm font-label-mono-sm text-primary-container hover:underline uppercase" href="#quote">Request Quote</a>
+</div>
+</div>
+</div>
+<!-- Copyright & Bottom Metadata -->
+<div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-label-mono-sm font-label-mono-sm text-on-surface-variant dark:text-on-surface-variant">
+<div class="">
+          © 2024 BST AUTO SHIELD LTD. KETTERING, NORTHAMPTONSHIRE, UK. ALL RIGHTS RESERVED.
+        </div>
+<div class="flex items-center space-x-6">
+<a class="hover:text-primary-container dark:hover:text-primary-container transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="hover:text-primary-container dark:hover:text-primary-container transition-colors duration-200" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Light client script for micro-interactions -->
+<script>
+    // Smooth filter tab highlight
+    const filterButtons = document.querySelectorAll('#gallery-filters button');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.className = 'px-4 py-2 rounded-lg bg-surface-container border border-outline-variant/30 text-on-surface-variant hover:text-on-surface text-label-mono-sm font-label-mono-sm uppercase transition-all';
+        });
+        btn.className = 'px-4 py-2 rounded-lg bg-primary-container text-on-primary-fixed text-label-mono-sm font-label-mono-sm font-bold uppercase transition-all shadow-[0_0_15px_rgba(0,229,255,0.3)]';
+      });
+    });
+  </script>
+
+
+</body></html>
