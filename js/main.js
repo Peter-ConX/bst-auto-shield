@@ -316,6 +316,9 @@
 
       galleryItems.forEach(item => {
         item.addEventListener('click', (e) => {
+          if (item.tagName === 'A' || item.getAttribute('data-lightbox') === 'false') {
+            return; // Let standard link navigation happen
+          }
           e.preventDefault();
           const img = item.querySelector('img');
           const title = item.getAttribute('data-title') || (img ? img.alt : '');

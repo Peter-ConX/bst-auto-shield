@@ -109,8 +109,8 @@
       
       <!-- Brand Logo / Wordmark -->
       <a href="#" class="flex items-center gap-3.5 group text-decoration-none">
-        <div class="w-10 h-10 rounded-lg p-1 bg-surface-raised border border-white/10 group-hover:border-cyan transition-colors flex items-center justify-center shrink-0">
-          <img src="assets/logo-highres.png" alt="BST Auto Shield Logo" class="w-full h-full object-contain">
+        <div class="w-11 h-11 rounded-full p-0.5 bg-white border border-white/20 group-hover:border-cyan shadow-sm flex items-center justify-center shrink-0 overflow-hidden">
+          <img src="assets/bst-logo-official.png" alt="BST Auto Shield Logo" class="w-full h-full object-contain">
         </div>
         <div class="flex flex-col">
           <span class="font-display font-bold tracking-tight text-white text-lg uppercase group-hover:text-cyan transition-colors leading-none">
@@ -173,7 +173,9 @@
   <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu">
     <div class="flex items-center justify-between pb-6 border-b border-white/10">
       <div class="flex items-center gap-3">
-        <img src="assets/logo-highres.png" alt="BST Auto Shield Logo" class="w-8 h-8 object-contain">
+        <div class="w-9 h-9 rounded-full p-0.5 bg-white border border-white/20 flex items-center justify-center shrink-0 overflow-hidden">
+          <img src="assets/bst-logo-official.png" alt="BST Auto Shield Logo" class="w-full h-full object-contain">
+        </div>
         <span class="font-display font-bold text-white text-base tracking-wider uppercase">BST AUTO SHIELD</span>
       </div>
       <button id="mobile-menu-close" type="button" class="p-2 rounded-md bg-surface-raised border border-white/10 text-slate-300 hover:text-white" aria-label="Close menu">
@@ -837,9 +839,13 @@
         </div>
 
         <!-- Filter Buttons -->
+        <!-- Filter Buttons -->
         <div class="flex flex-wrap gap-2">
           <button type="button" data-gallery-filter="all" class="px-3.5 py-1.5 rounded-md bg-cyan text-slate-950 font-bold border border-cyan-400 font-mono text-xs uppercase transition-all">
             All
+          </button>
+          <button type="button" data-gallery-filter="vehicles" class="px-3.5 py-1.5 rounded-md bg-surface-raised text-slate-300 border border-white/10 hover:border-cyan/40 font-mono text-xs uppercase transition-all">
+            Vehicles
           </button>
           <button type="button" data-gallery-filter="studio" class="px-3.5 py-1.5 rounded-md bg-surface-raised text-slate-300 border border-white/10 hover:border-cyan/40 font-mono text-xs uppercase transition-all">
             Studio Bay
@@ -847,8 +853,8 @@
           <button type="button" data-gallery-filter="tint" class="px-3.5 py-1.5 rounded-md bg-surface-raised text-slate-300 border border-white/10 hover:border-cyan/40 font-mono text-xs uppercase transition-all">
             Tint Detail
           </button>
-          <button type="button" data-gallery-filter="vehicles" class="px-3.5 py-1.5 rounded-md bg-surface-raised text-slate-300 border border-white/10 hover:border-cyan/40 font-mono text-xs uppercase transition-all">
-            Vehicles
+          <button type="button" data-gallery-filter="video" class="px-3.5 py-1.5 rounded-md bg-surface-raised text-slate-300 border border-white/10 hover:border-cyan/40 font-mono text-xs uppercase transition-all">
+            Video Tour
           </button>
         </div>
       </div>
@@ -856,77 +862,99 @@
       <!-- Gallery Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- Gallery Item 1: Real Customer Mercedes -->
-        <div data-gallery-category="vehicles tint" data-title="Mercedes Executive Tint" data-desc="Complete privacy window tint application" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
-          <img src="assets/real/mercedes.jpg" alt="Mercedes with finished window tint at BST Auto Shield" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <!-- Gallery Item 1: Real Customer Red BMW (Hex Lighting Studio) -->
+        <div data-gallery-category="vehicles studio" data-title="BMW M-Power Performance Window Tint" data-desc="Finished under BST Auto Shield workshop hexagonal LED lighting at 1 Henson Way, Kettering" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
+          <img src="assets/real/car-1-red-bmw.png" alt="Red BMW sports coupe under workshop hex LED lights at BST Auto Shield" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">CLIENT VEHICLE • STUDIO BAY</span>
+            <h4 class="font-display font-semibold text-white text-base">BMW M-Power Performance Tint</h4>
+            <p class="text-xs text-slate-300">Under Studio Hexagonal LED Lighting</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2: Real Customer Volvo XC70 (BST Show Plate) -->
+        <div data-gallery-category="vehicles tint" data-title="Volvo XC70 Estate Privacy Glass" data-desc="Complete rear privacy glass package with BST Auto Shield show plate at Kettering studio" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
+          <img src="assets/real/car-2-volvo-estate.png" alt="Volvo XC70 estate with BST Auto Shield show plate and rear window tint" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">CLIENT VEHICLE</span>
+            <h4 class="font-display font-semibold text-white text-base">Volvo XC70 Estate Privacy Glass</h4>
+            <p class="text-xs text-slate-300">BST Auto Shield Studio, Kettering</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3: Real Customer Vauxhall Insignia (BST Show Plate) -->
+        <div data-gallery-category="vehicles tint" data-title="Vauxhall Insignia Privacy Styling" data-desc="Rear passenger and rear window shading with BST Auto Shield show plate" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
+          <img src="assets/real/car-3-saloon-tint.png" alt="Black saloon car with BST Auto Shield show plate and dark rear tint" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">CLIENT VEHICLE</span>
+            <h4 class="font-display font-semibold text-white text-base">Executive Saloon Dark Tint Pack</h4>
+            <p class="text-xs text-slate-300">Full rear cabin privacy package</p>
+          </div>
+        </div>
+
+        <!-- Gallery Item 4: Real Customer Mercedes -->
+        <div data-gallery-category="vehicles tint" data-title="Mercedes Executive Privacy Tint" data-desc="Precision automotive window film application with clean factory-style edge alignment" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
+          <img src="assets/real/mercedes.jpg" alt="Mercedes saloon with finished window tint at BST Auto Shield" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
           <div class="absolute bottom-4 left-4 right-4">
             <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">CLIENT VEHICLE</span>
             <h4 class="font-display font-semibold text-white text-base">Mercedes Saloon Privacy Tint</h4>
-            <p class="text-xs text-slate-300">1 Henson Way Studio</p>
+            <p class="text-xs text-slate-300">1 Henson Way Studio Bay</p>
           </div>
         </div>
 
-        <!-- Gallery Item 2: Real Customer Car 1 -->
-        <div data-gallery-category="vehicles tint" data-title="Performance Vehicle Tint" data-desc="Precision automotive window film application" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
-          <img src="assets/real/car-1.jpg" alt="Finished customer vehicle at BST Auto Shield" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
-          <div class="absolute bottom-4 left-4 right-4">
-            <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">CLIENT VEHICLE</span>
-            <h4 class="font-display font-semibold text-white text-base">Performance Vehicle Shading</h4>
-            <p class="text-xs text-slate-300">Clean edge alignment</p>
-          </div>
-        </div>
-
-        <!-- Gallery Item 3: Real Customer Car 2 -->
-        <div data-gallery-category="vehicles tint" data-title="Estate Privacy Glass" data-desc="Rear privacy glass package" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
-          <img src="assets/real/car-2.jpg" alt="Customer vehicle with rear privacy tint at BST Auto Shield" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
-          <div class="absolute bottom-4 left-4 right-4">
-            <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">CLIENT VEHICLE</span>
-            <h4 class="font-display font-semibold text-white text-base">Estate Privacy Glass Package</h4>
-            <p class="text-xs text-slate-300">Kettering Studio</p>
-          </div>
-        </div>
-
-        <!-- Gallery Item 4: Customer Car in Studio Bay -->
-        <div data-gallery-category="studio vehicles" data-title="BST Auto Shield Studio Bay" data-desc="Kettering Studio Installation Bay, 1 Henson Way" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
-          <img src="assets/real/real-1-studio-car.jpg" alt="BST Auto Shield Studio customer vehicle in workshop bay" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
-          <div class="absolute bottom-4 left-4 right-4">
-            <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">KETTERING STUDIO BAY</span>
-            <h4 class="font-display font-semibold text-white text-base">Client Vehicle in Bay</h4>
-            <p class="text-xs text-slate-300">1 Henson Way Workshop</p>
-          </div>
-        </div>
-
-        <!-- Gallery Item 5: Real Workshop Front -->
-        <div data-gallery-category="studio" data-title="BST Auto Shield Workshop" data-desc="1 Henson Way, Kettering NN16 8PX" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
+        <!-- Gallery Item 5: Real Workshop Front at 1 Henson Way -->
+        <div data-gallery-category="studio" data-title="BST Auto Shield Workshop Bay" data-desc="1 Henson Way, Kettering NN16 8PX, Northamptonshire" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
           <img src="assets/real/real-2-workshop-front.jpg" alt="BST Auto Shield Workshop front, 1 Henson Way, Kettering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
           <div class="absolute bottom-4 left-4 right-4">
             <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">STUDIO LOCATION</span>
             <h4 class="font-display font-semibold text-white text-base">BST Auto Shield Bay Entrance</h4>
-            <p class="text-xs text-slate-300">Kettering, Northamptonshire</p>
+            <p class="text-xs text-slate-300">1 Henson Way, Kettering NN16 8PX</p>
           </div>
         </div>
 
-        <!-- Gallery Item 6: Window Tint Detail Application -->
-        <div data-gallery-category="tint" data-title="Window Tint Application" data-desc="Careful edge alignment and film smoothing" class="group rounded-xl overflow-hidden bg-surface border border-white/10 hover:border-cyan/40 transition-all duration-300 relative cursor-pointer aspect-[4/3]">
-          <img src="assets/real/real-4-tint-window.jpg" alt="Window tint film detail application on car glass" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
-          <div class="absolute bottom-4 left-4 right-4">
-            <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">HAND-CRAFTED DETAIL</span>
-            <h4 class="font-display font-semibold text-white text-base">Precision Window Film Prep</h4>
-            <p class="text-xs text-slate-300">Edge finish and moisture extraction</p>
+        <!-- Gallery Item 6: Google Maps Video Tour (Direct External Link) -->
+        <a href="https://maps.app.goo.gl/vgbQrDi8YmmMDtCY9" target="_blank" rel="noopener noreferrer" data-lightbox="false" data-gallery-category="studio video" class="group rounded-xl overflow-hidden bg-surface border border-cyan/40 hover:border-cyan transition-all duration-300 relative cursor-pointer aspect-[4/3] block shadow-lg shadow-cyan/10">
+          <img src="assets/real/video-walkaround-poster.jpg" alt="BST Auto Shield studio walkaround video on Google Maps" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-canvas/95 via-canvas/40 to-transparent"></div>
+          
+          <!-- Play Badge Overlay -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-16 h-16 rounded-full bg-cyan/90 group-hover:bg-cyan text-slate-950 flex items-center justify-center shadow-xl shadow-cyan/30 group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
           </div>
-        </div>
+
+          <div class="absolute top-4 right-4">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-black/70 backdrop-blur border border-cyan/40 text-cyan font-mono text-[10px] uppercase font-bold tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-cyan animate-pulse"></span>
+              Video Tour
+            </span>
+          </div>
+
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="font-mono text-[10px] text-cyan uppercase tracking-wider block mb-1">GOOGLE MAPS VERIFIED VIDEO</span>
+            <h4 class="font-display font-semibold text-white text-base flex items-center justify-between">
+              <span>Studio Walkaround Tour</span>
+              <svg class="w-4 h-4 text-cyan group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+              </svg>
+            </h4>
+            <p class="text-xs text-slate-300">Tap to watch customer review &amp; walkaround</p>
+          </div>
+        </a>
 
       </div>
 
       <div class="mt-8 text-center">
         <p class="text-xs text-slate-400 font-mono">
-          * Real studio photos taken at BST Auto Shield, 1 Henson Way, Kettering.
+          * Real studio photos &amp; walkaround video recorded at BST Auto Shield, 1 Henson Way, Kettering.
         </p>
       </div>
 
@@ -1421,8 +1449,8 @@
         <!-- Brand & Address -->
         <div class="lg:col-span-5 space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg p-1 bg-surface border border-white/10 flex items-center justify-center shrink-0">
-              <img src="assets/logo-highres.png" alt="BST Auto Shield Logo" class="w-full h-full object-contain">
+            <div class="w-12 h-12 rounded-full p-0.5 bg-white border border-white/20 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+              <img src="assets/bst-logo-official.png" alt="BST Auto Shield Logo" class="w-full h-full object-contain">
             </div>
             <span class="font-display font-bold text-xl text-white uppercase tracking-tight">BST AUTO SHIELD</span>
           </div>
